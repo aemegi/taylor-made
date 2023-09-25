@@ -226,7 +226,7 @@ input[type=text]:focus, textarea:focus {
 .img6 { grid-area: img6; }
 .hr {grid-area: hr;}
 .hr2 {grid-area: hr2;}
-
+@media screen and (min-width: 900px) {
 .grid-container-portfolio {
   display: grid;
   grid-template-areas:
@@ -244,13 +244,38 @@ input[type=text]:focus, textarea:focus {
   width: 80%;
 }
 
+.img1 { width: 100%; }
+}
 .grid-container-portfolio > div {
   background-color: rgba(255, 255, 255, 0.8);
   text-align: center;
   padding: 20px 0;
   font-size: 30px;
 }
-
+@media screen and (max-width: 900px) {
+  .grid-container-portfolio {
+    display: grid;
+    grid-template-areas:
+      'logo'
+      'img1'
+      'txt1'
+      'txt2' 
+      'img2'
+      'img3'
+      'hr'
+      'img4'
+      'img5'
+      'img6'
+      'txt3'
+      'hr2';
+    gap: 10px;
+    background-color: white;
+    padding: 10px;
+    margin: auto;
+    width: 500px;
+  }
+  .img1 { width: 450px; }
+} 
 .nostyle {
   text-decoration: none;
   color: black;
