@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Taylor-Made</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+      
+<div class="grid-container">
+    <div class="logo"><h1 class="logo">Taylor-Made<img src="logo/Needle_Thread_And_Timble_clip_art_small.png"></h1></div>
+   
+    <div class="subhead"> <hr class="sewing"> 
+        <h2>Hello, I'm Taylor.</h2>
+        <h3>I'm a fashion designer,</h3>
+        <h3 class="indent">tailor, seamstress,</h3>
+        <h3 class="indent">and boutique owner.</h3></div> 
+    <div class="buttons">
+            <a  href="portfolio.html"><button class="btn">Portfolio</button></a>
+            <button class="btn" onclick="openBoutique()">Boutique</button>
+            <button class="btn" onclick="openContact()">Contact</button></div>
+    <div class="profilepic">
+        <img class="taylor hide" src="taylor.jpg"></div>
+  </div>
+
+
+    <div class="footer">
+        <p>Not a real person/company. Design free for personal or educational use. <a href="http://andreacrofoot.name">Web Designers Site.</a></p>
+      </div>
+
+
+
+      <div id="myContact" class="overlay">
+
+        <!-- Button to close the overlay navigation -->
+        <a href="javascript:void(0)" class="closebtn" onclick="closeContact()">&times;</a>
+        
+        <!-- Overlay content -->
+        <div class="overlay-content">
+        <form method="POST" action="index.php" id="contact-form">
+        <p><label>First Name:</label> <br><input name="name" type="text" /></p>
+        <p><label>Email Address:</label><br> <input style="cursor: pointer;" name="email" type="text" /></p>
+        <p><label>Message:</label>  <br><textarea style="width:40%;height:10%;" name="message"></textarea> </p>
+        
+        <p><button class="btn" type="submit" name="submit">Send Message</button></p>
+        </form>
+        </div>
+        
+        </div>
+        
+ <!-- The overlay -->
+ <div id="myBoutique" class="overlay">
+
+    <!-- Button to close the overlay navigation -->
+    <a href="javascript:void(0)" class="closebtn" onclick="closeBoutique()">&times;</a>
+    
+    <!-- Overlay content -->
+    <div class="overlay-content">
+        <div class="grid-container-botique">
+        <div class="img hide"><img src="streetshop.jpg" width="400px"></div>
+        <div class="address">  <h1>Taylor-Made</h1>
+            <h6>#555-462-8401</h6>
+            <h6>123 N Main</h6>
+            <h6>Some City, ST USA</h6></div>
+            <div class="map">
+                <iframe
+                width="450"
+                height="250"
+                frameborder="0" style="border:0"
+                referrerpolicy="no-referrer-when-downgrade"
+                src="https://www.google.com/maps/embed/v1/place?key=AIzaSyDTe16S6Ouoc0dLxeFuOcdurD7W4LeWMBk&q=riverfrontpark"
+                allowfullscreen>
+              </iframe>
+            </div>
+    </div>
+    </div>
+    
+    </div>
+
+    <script>
+        /* Open when someone clicks on the span element */
+  function openBoutique() {
+    document.getElementById("myBoutique").style.width = "100%";
+  }
+  
+  /* Close when someone clicks on the "x" symbol inside the overlay */
+  function closeBoutique() {
+    document.getElementById("myBoutique").style.width = "0%";
+  }   
+
+        /* Open when someone clicks on the span element */
+function openContact() {
+  document.getElementById("myContact").style.width = "100%";
+}
+
+/* Close when someone clicks on the "x" symbol inside the overlay */
+function closeContact() {
+  document.getElementById("myContact").style.width = "0%";
+}   
+      </script>
+
+</body>
+</html>
